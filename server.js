@@ -65,7 +65,7 @@ app.get('/artist/:id', (req, res) => {
 
 app.get('/addArtist/:name', (req, res) => {
   if (req.params.name != null && typeof req.params.name === 'string') {
-    const query = `INSERT INTO Artists VALUES (DEFAULT, "${req.params.name}")`;
+    const query = `INSERT INTO Artist VALUES (DEFAULT, "${req.params.name}")`;
     database.query(query, (err, rows, fields) => {
       if (err) throw err;
 
